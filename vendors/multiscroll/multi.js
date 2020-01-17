@@ -62,4 +62,12 @@
             $('#multiscroll').multiscroll.destroy();
         }
     });
+    
+    if ($(window).width() < 1199) {
+        $(".section_3").find("div.skillbar-bg").each(function () {
+            $(this).find(".custom-skillbar").delay(200).animate({
+                width: $(this).attr("data-percent")
+            }, 1500);
+        });
+    }
 })(jQuery)

@@ -154,7 +154,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   50% {
-    opacity: 1;
+    opacity: 0.05;
   }
 }
 
@@ -166,7 +166,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   50% {
-    opacity: 1;
+    opacity: 0.05;
   }
 }
 
@@ -1235,6 +1235,34 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-name: fadeInUp2;
     animation-name: fadeInUp2
 }
+
+@-webkit-keyframes fadeInUp3 {
+    0% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+@keyframes fadeInUp3 {
+    0% {
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+.fadeInUp3 {
+    -webkit-animation-name: fadeInUp3;
+    animation-name: fadeInUp3;
+}
+
 @-webkit-keyframes fadeInUpBig {
     0% {
         opacity: 0;
@@ -2903,6 +2931,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         -ms-transform:translate(0,0);
         transform:translate(0,0)
     }
+}
+.slideInnew{
+    -webkit-animation-name:slideInnew;
+    animation-name:slideInnew;
 }
 .slideInnew3{
     -webkit-animation-name:slideInnew3;

@@ -78,3 +78,12 @@
 .payment_features_item .learn_btn_two:hover {
     color: #5f51fb;
 }
+
+.btn_six{
+    color: #fff;
+    background: #17c7bd;
+    &:hover{
+        background: #ebfaf9;
+        color: #17c7bd;
+    }
+}

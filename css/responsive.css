@@ -38,6 +38,11 @@
         font-size: 40px;
         margin-bottom: 55px;
     }
+    
+    .chat_img .p_one{
+        right: -130px;
+        bottom: 330px;
+    }
 }
 @media (max-width: 1550px){
     .s_features_item .s_features_img img{
@@ -56,12 +61,6 @@
     .saas_home_img img,.software_img img{
         max-width: 100%;
     }
-/*
-    .s_promo_info .promo_item.item_five{
-        left: 80%;
-        top: 53%;
-    }
-*/
     .container.custom_container{
         max-width: 1170px;
     }
@@ -160,6 +159,20 @@
     }
     .split_content .contact_form_box .text_box {
         margin-bottom: 7px;
+    }
+    .new_startup_img img{
+        max-width: 100%;
+    }
+    .clients_feedback_item .feedback_body {
+        padding-left: 15px;
+        padding-right: 7px;
+    }
+    .chat_clients_feedback.feedback_two .clients_feedback_item .feedback_body{
+        margin-right: -70px;
+        padding-left: 25px;
+    }
+    .menu_one .tracking_btn .er_btn{
+        padding: 8px 20px;
     }
 }
 
@@ -297,7 +310,7 @@
         top: 14px;
         right: -104px;
     }
-    .section-3 .scroll-wrap{
+    .scroll-wrap{
         padding-top: 120px;
         padding-bottom: 120px;
     }
@@ -311,14 +324,47 @@
     .section_one-content h2 br{
         display: none;
     }
-    .section-4 .vertical-centred{
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
     .support_tab_content .tab-pane .tab_img{
         max-width: 100%;
         margin-right: 0;
         padding-left: 0;
+    }
+    .pp_sec_title h2{
+        line-height: 50px;
+    }
+    .pp_features_item .icon{
+        margin-bottom: 25px;
+    }
+    .pp_features_item{
+        margin-top: 40px;
+    }
+    .pp_testimonial_info .pp_testimonial_slider .item .media .media-body h4{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .pp_features_info .row {
+        margin-top: -30px;
+    }
+    .pp_sec_title{
+         margin-bottom: 30px;   
+    }
+    .chat_banner_content h2 {
+        font-size: 46px;
+        line-height: 65px;
+    }
+    .chat_features_img_three .chat_two{
+        max-width: 100%;
+    }
+    .chat_banner_area .offset-lg-2{
+        margin-left: 100px;
+    }
+    .clients_feedback_item .feedback_body p{
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .chat_clients_feedback.feedback_two .clients_feedback_item .feedback_body {
+        margin-right: -138px;
+        padding-left: 25px;
     }
 }
 
@@ -359,6 +405,10 @@
     .analytices_list_area .macbook_a {
         right: -333px;
     }
+    .chat_banner_area .offset-lg-2{
+        margin-left: 80px;
+    }
+    
 }
 
 @media (max-width:1199px){
@@ -1079,10 +1129,6 @@
     .pp_contact_info .pp_contact_item{
         padding-right: 0;
     }
-    .section-5 .vertical-centred {
-        padding-top: 120px;
-        padding-bottom: 80px;
-    }
     .h_analytices_img img,.h_analytices_features_item .h_analytices_img_two img{
         max-width: 100%;
     }
@@ -1095,11 +1141,164 @@
     .support_home_img img{
         max-width: 100%;
     }
+    .navbar .offcanfas_menu > .nav-item + .nav-item{
+        margin-left: 0;
+    }
+    .header_footer p{
+        margin-bottom: 0;
+    }
+    .pp_contact_form{
+        padding-top: 20px;   
+    }
+    .security_banner_content .app_btn,.security_banner_content .w_btn{
+        font-size: 15px;
+    }
+    .security_banner_content .w_btn{
+        margin-left: 6px;
+    }
+    .security_banner_content h2 {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    .h_security_item{
+        padding-left: 0;
+        padding-right: 0;
+        margin: 25px 0px;
+    }
+    .security_features_inner .s_features_item .item{
+        width: 285px;
+    }
+    .h_security_img{
+        padding-left: 30px;
+    }
+    .h_security_img img{
+        max-width: 100%;
+    }
+    .h_security_img:before{
+        left: 0;
+    }
+    .h_analytices_features_item.flex-row-reverse .h_security_img{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .h_analytices_features_item.flex-row-reverse .h_security_img:before{
+        right: 0;
+    }
+    .security_action_inner .er_btn_two{
+        white-space: nowrap;
+    }
+    .security_action_inner .media{
+        padding-right: 20px;
+    }
+    .security_action_inner .media img{
+        margin-right: 20px;
+    }
+    .security_inner{
+        padding: 0px 46px 20px;
+    }
+    .f_widget.pl_70,.f_widget.pl_40{
+        padding-left: 0;
+    }
+    .event_text{
+        padding-right: 0;
+    }
+    .event_about_content {
+        padding-right: 0px;
+    }
+    .event_about_img img{
+        max-width: 100%;
+    }
+    .event_about_img .about_bg{
+        right: -20px;
+        bottom: -20px;
+    }
+    .event_promotion_inner .event_img img{
+        max-width: 100%;
+    }
+    .event_fact_area .seo_fact_info .seo_fact_item.last{
+        margin-top: 0;
+    }
+    .event_location{
+        padding: 100px 80px;   
+    }
+    .chat_features_item{
+        padding: 0px;
+    }
+    .chat_features_item .round_circle{
+        left: 50%;
+    }
+    .chat_features_content.pr_70,.chat_features_content.pl_70{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .chat_features_img_two .chat_one{
+        max-width: 100%;
+        top: 0;
+    }
+    .chat_features_img .dot_bg{
+        width: 100%;
+    }
+    .chat_features_img_three{
+        height: 400px;
+    }
+    .chat_features_img_three .chat_two{
+        left: 15px;
+    }
+    .chat_features_img_two{
+        margin-left: 0;
+    }
+    .chat_core_features_area {
+        padding-bottom: 50px;   
+    }
+    .chat_features_area_three{
+        padding-top: 50px;
+    }
+    .chat_banner_area .offset-lg-2 {
+        margin-left: 26px;
+    }
+    .chat_img .p_one {
+        right: -188px;
+    }
+    .chat_clients_feedback{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .clients_feedback_item .feedback_body{
+        padding: 0px 30px 0px 70px;
+    }
+    .chat_clients_feedback.feedback_two .clients_feedback_item .feedback_body{
+        margin-right: 0;
+        padding-left: 30px;
+    }
+    .menu_one .container-fluid {
+        padding-left: 35px;
+        padding-right: 72px;
+    }
+    .tracking_pr_item .tracking_content.mr_70,.tracking_pr_item .tracking_content.ml_70{
+        margin-right: 0;
+        margin-left: 0;
+        bottom: 0;
+    }
+    .tracking_pr_item .tracking_content {
+        padding: 26px 30px;
+    }
 }
 
 
 
 @media (max-width:991px){
+    .menu_scroll .alter_nav{
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+    .menu_scroll.menu_poss .w_menu.search_cart a.nav-link{
+        color: #051441;
+    }
+    .menu_scroll .menu > .nav-item:nth-last-child(-n+2).submenu .dropdown-menu{
+        left: 0;
+        right: auto;
+    }
     .s_service_section {
         margin-top: 280px;
     }
@@ -1642,21 +1841,22 @@
     .menu_five .menu > .nav-item:hover .nav-link,.menu_five .menu > .nav-item.active .nav-link{
         color: #3d64f4;
     }
-    .menu_five .menu > .nav-item:hover .nav-link:before,.menu_five .menu > .nav-item.active .nav-link:before{
+    .menu_five > .menu > .nav-item:hover .nav-link:before,.menu_five .menu > .nav-item.active .nav-link:before{
         background: #3d64f4;
     }
     .menu_seven .menu > .nav-item:hover .nav-link,.menu_seven .menu > .nav-item.active .nav-link{
         color: #4069eb;
     }
-    .menu_seven .menu > .nav-item:hover .nav-link:before,.menu_seven .menu > .nav-item.active .nav-link:before{
+    .menu_seven > .menu > .nav-item:hover .nav-link:before,.menu_seven .menu > .nav-item.active .nav-link:before{
         background: #4069eb;
     }
-    .menu_four .menu > .nav-item:hover .nav-link,.menu_four .menu > .nav-item.active .nav-link{
+    .menu_four >.menu > .nav-item:hover .nav-link,.menu_four .menu > .nav-item.active .nav-link{
         color: #6754e2;
     }
-    .menu_four .menu > .nav-item:hover .nav-link:before,.menu_four .menu > .nav-item.active .nav-link:before{
+    .menu_four > .menu > .nav-item:hover > .nav-link:before,.menu_four .menu > .nav-item.active > .nav-link:before{
         background: #6754e2;
     }
+    
     .payment_features_content.pl_70{
         padding-left: 0;
     }
@@ -2295,15 +2495,8 @@
     .animation_inner li:nth-child(17) {
         left: 632px;
     }
-    .section-1 .vertical-centred {
-        padding-top: 150px;
-        padding-bottom: 80px;
-    }
     .section-1 .section_one-content{
         padding-top: 80px;
-    }
-    .section-2 .vertical-centred {
-        padding-top: 120px;
     }
     .section-2 .pp_work_content{
         margin-bottom: 50px;
@@ -2358,8 +2551,193 @@
     .header_area .container{
         position: relative;
     }
-    .search_cart.menu{
+    .search_cart.menu,.navbar .offcanfas_menu{
         background: transparent;
+    }
+    .navbar .offcanfas_menu{
+        padding-left: 0;
+    }
+    .h_security_banner_area{
+        height: auto;
+        min-height: auto;
+        padding: 150px 0px;;
+    }
+    .security_banner_content{
+        margin-bottom: 40px;
+    }
+    .h_security_item{
+        margin: 20px 0px;    
+    }
+    .security_features_inner .s_features_item .item{
+        width: 220px;
+        padding: 40px 0px;
+    }
+    .h_security_img {
+        max-width: 490px;
+    }
+    .security_list_area .macbook_a{
+        display: block;
+        position: relative;
+        right: -130px;
+        bottom: 0;
+    }
+    .security_list_area .lock{
+        right: auto;
+        left: 80px;
+        top: 380px;
+        bottom: auto;
+    }
+    .security_list_area{
+        padding: 20px 0px 100px;
+    }
+    .security_list_area .analytices_title{
+        margin-top: 50px;
+    }
+    .security_inner .row{
+        justify-content: center;
+    }
+    .security_action_inner,.security_action_inner .media{
+        display: block;
+        text-align: center;
+    }
+    .security_action_inner .media img{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .security_action_inner .media h3{
+        margin-bottom: 25px;
+    }
+    .security_action_inner .media h3{
+        line-height: 45px;
+    }
+    .price_info_two .price_head .p_head.time{
+        padding-top: 0;
+    }
+    .instagram_widget ul{
+        max-width: 290px;
+    }
+    .event_banner_content h2 {
+        font-size: 69px;
+        line-height: 80px;
+    }
+    .event_text{
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    .event_about_img{
+        max-width: 400px;
+        margin-bottom: 60px;
+    }
+    .event_about_area {
+        padding: 110px 0px 0px;
+    }
+    .event_team_slider .item .e_team_img img{
+        max-width: 100%;
+    }
+    .event_features_inner{
+        justify-content: center;
+    }
+    .event_features_inner .col-lg-4{
+        margin-bottom: 30px;
+    }
+    .e_promo_text{
+        margin-left: 15px;
+        padding: 60px 20px;
+    }
+    .e_promo_text h3{
+        font-size: 33px;
+    }
+    .event_promotion_info p{
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 25px;
+    }
+    .event_tab_content .media .media-body{
+        padding-left: 50px;
+    }
+    .event_tab_content .media .media-left{
+        margin-right: 50px;
+    }
+    .event_price_item{
+        margin-bottom: 60px;
+    }
+    .event_fact_area .seo_fact_info .seo_fact_item:nth-child(even){
+        margin-top: 0;
+    }
+    .chat_banner_area{
+        height: auto;
+    }
+    .chat_banner_content{
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+    .chat_img {
+        max-width: 405px;
+        margin: 0 auto;
+    }
+    .chat_features_item{
+        margin-bottom: 50px;
+    }
+    .chat_core_features_area .row{
+        justify-content: center;
+    } 
+    .chat_core_features_area .chat_title br{
+        display: block;
+    }
+    .chat_features_img{
+        max-width: 500px;
+        margin-bottom: 60px;
+    }
+    .chat_features_img.chat_features_img_one .chat_one{
+        top: -80px;
+    }
+    .chat_features_area {
+        padding: 70px 0px;
+    }
+    .chat_banner_area .offset-lg-2 {
+        margin-left: 0px;
+    }
+    .tracking_banner_content img{
+        max-width: 100%;
+    }
+    .tracking_software_logo img{
+        max-width: 100%;
+        margin-top: 25px;
+    }
+    .tracking_software_logo{
+        justify-content: center;
+    }
+    .menu_one .tracking_btn{
+        padding-left: 62px;
+        padding-right: 62px;
+        margin-bottom: 10px;
+    }
+    .tracking_pr_item .tracking_content{
+        position: relative;
+        max-width: 100%;
+        top: 0;
+    }
+    .tracking_pr_item + .tracking_pr_item {
+        margin-top: 60px;
+    }
+    .tracking_product_area{
+        padding-top: 80px;
+    }
+    .tracking_price_inner .track_price {
+        padding-right: 25px;
+    }
+    .tracking_price_inner .track_text{
+        padding-left: 25px;
+    }
+    .tracking_pr_item .tracking_content{
+        margin-top: 50px;
+    }
+    .h_footer_track{
+        padding-bottom: 80px;
+    }
+    .menu_one .container-fluid {
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
@@ -3066,6 +3444,104 @@
     .h_leaf.two,.h_leaf.one{
         max-width: 40%;
     }
+    .hamburger-menu-wrepper .animation-box{
+        display: flex;
+    }
+    .hamburger-menu-wrepper .animation-box .menu-box{
+        display: block !important;
+        width: 80%;
+        max-height: 450px;
+        overflow-y: scroll;
+    }
+    .close_icon{
+        right: 20px;
+        top: 20px;
+    }
+    .hamburger-menu-wrepper.show-menu .animation-box .menu-box .offcanfas_menu > li a{
+        font-size: 25px;
+    }
+    .navbar .offcanfas_menu > .nav-item:not(:last-child){
+        margin-bottom: 5px;
+    }
+    .header_footer{
+        padding-bottom: 0;
+        padding-top: 20px;
+        display: block;
+    }
+    .header_footer ul{
+        margin-bottom: 0;
+    }
+    .navbar .offcanfas_menu > .nav-item.submenu .dropdown-menu{
+        padding-top: 0;
+    }
+    .security_features_inner{
+        display: block;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .security_features_inner .s_features_item:nth-child(3n+1),.security_features_inner .s_features_item:nth-child(3n-1){
+        margin-top: 0;
+    }
+    .security_features_inner .s_features_item{
+        width: calc(50% - 22px);
+        margin: 0px 10px 30px;
+        display: inline-block
+    }
+    .security_features_inner .s_features_item .item{
+        width: 100%;
+    }
+    .event_banner_content h2 {
+        font-size: 58px;
+        line-height: 65px;
+    }
+    .event_promotion_info {
+        padding: 0px 15px;
+    }
+    .e_promo_text {
+        margin-left: 0;
+    }
+    .event_promotion_info p{
+        padding-top: 50px;
+    }
+    .event_schedule_inner .event_tab .nav-item .nav-link{
+        padding-left: 47px;
+        padding-right: 47px;
+        margin-bottom: 10px;
+    }
+    .event_schedule_inner .event_tab .nav-item + .nav-item{
+        margin-left: 10px;
+    }
+    .e_promo_text{
+        padding: 30px 20px;
+    }
+    .event_fact_area .seo_fact_info .seo_fact_item:first-child,.event_fact_area .seo_fact_info .seo_fact_item,.event_fact_area .seo_fact_info .seo_fact_item.last,.event_fact_area .seo_fact_info .seo_fact_item:nth-child(even){
+        margin-top: 20px !important;
+    }
+    .event_sponser_inner .event_sponser_item .sponser_title{
+        padding-top: 0;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .event_sponser_inner .event_sponser_item .row{
+        justify-content: center;
+    }
+    .clients_feedback_item{
+        display: block;
+        padding-top: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .clients_feedback_item .feedback_body{
+        padding:0px;
+        margin: 0px;
+    }
+    .chat_clients_feedback.feedback_two .clients_feedback_item .feedback_body{
+        padding-left: 0;
+    }
+    .tracking_banner_area{
+        height: auto;
+        padding-bottom: 70px;
+    }
 }
 
 @media (max-width:650px){
@@ -3427,7 +3903,43 @@
         width: 100%;
         margin-bottom: 30px;
     }
-    
+    .security_customers_logo_area .d-flex,.security_app_btn{
+        display: block !important;
+    }
+    .security_app_btn + .security_app_btn {
+        margin-left: 0;
+    }
+    .security_app_btn {
+        margin-top: 18px;
+    }
+    .security_inner .analytices_logo{
+        padding: 20px 10px;
+    }
+    .event_counter .redCountdownWrapper > div{
+        width: calc(33% - 36px);
+        margin-bottom: 20px;
+    }
+    .event_tab_content .media{
+        padding: 30px 20px;
+    }
+    .chat_img .p_one{
+        width: 150px;
+        right: -50px;
+    }
+    .chat_img .p_two{
+        width: 150px;
+        left: -50px;
+    }
+    .chat_img img{
+        max-width: 100%;
+    }
+    .chat_btn{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .tracking_price_inner .track_price h3{
+        font-size: 85px;
+    }
 }
 
 @media (max-width:576px){
@@ -3614,7 +4126,7 @@
     .shopping_cart_area .cart_btn{
         margin-bottom: 10px;
     }
-    .login-form .extra{
+    .login-form .extra,.security_banner_content .action_btn.d-flex{
         display: block !important;
     }
     .s_promo_info .promo_item{
@@ -3923,9 +4435,14 @@
         left: -10px;
         right: 0;
     }
-    .payment_subscribe_info .subscribe-form{
-        display: block;
+    .payment_subscribe_info .subscribe-form,.tracking_price_inner .track_body,.tracking_price_inner .track_price h6{
+        display: block !important;
         text-align: center;
+    }
+    .tracking_price_inner .track_text{
+        padding-left: 0;
+        border: 0px;
+        padding-top: 22px;
     }
     .payment_subscribe_info .subscribe-form .form-control{
         width: 100%;
@@ -4161,7 +4678,95 @@
         padding-left: 0;
         padding-right: 0;
     }
-    
+    .security_banner_content .w_btn{
+        display: block;
+        margin-top: 10px;
+    }
+    .security_list_area .macbook_a,.security_list_area .lock,.security_inner .security_leaf_left, .security_inner .security_leaf_right{
+        display: none;
+    }
+    .security_inner{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .h_security_area .h_security_item{
+        display: block !important;
+    }
+    .h_security_area .h_security_item img{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .security_features_inner .s_features_item{
+        width: 100%;
+    }
+    .security_app_btn{
+        font-size: 15px;
+    }
+    .security_app_btn i{
+        font-size: 25px;
+        padding-right: 10px;
+    }
+    .event_banner_content h2 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+    .event_counter .redCountdownWrapper > div{
+        width: calc(50% - 36px);
+        margin-bottom: 20px;
+    }
+    .event_counter .redCountdownWrapper .redCountdownValue span{
+        font-size: 16px !important;
+    }
+    .event_tab_content .media .media-body {
+        padding-left: 30px;
+    }
+    .event_tab_content .media .media-left {
+        margin-right: 30px;
+    }
+    .event_promotion_info{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    .chat_banner_content .pr_100{
+        padding-right: 0;
+    }
+    .chat_img .p_two {
+        width: 126px;
+        left: -15px;
+    }
+    .chat_img .p_three {
+        right: -15px;
+    }
+    .chat_features_img{
+        padding-left: 20px;
+    }
+    .chat_features_img .chat_two {
+        right: 0;
+        left: auto
+    }
+    .chat_features_img_two .chat_two{
+        left: 0;
+    }
+    .chat_features_img_two .chat_one{
+        left: -30px;
+    }
+    .chat_clients_feedback img{
+        max-width: 100%;
+    }
+    .chat_title h2{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .chat_banner_content h2 {
+        font-size: 36px;
+        line-height: 52px;
+    }
+    .tracking_pr_item .tracking_content{
+        padding: 30px;
+    }
+    .tracking_price_inner .track_body{
+        padding-bottom: 40px;
+    }
 }
 
 @media (max-height:420px){
@@ -4261,7 +4866,27 @@
         top: 335px;
         left: 35px;
     }
-    
+    .event_banner_content .event_btn_two{
+        margin-left: 0;
+    }
+    .event_banner_content .round{
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+    }
+    .event_tab_content .media{
+        display: block;
+    }
+    .event_tab_content .media .media-body{
+        padding-left: 0;
+        border: 0px;
+        margin-top: 15px;
+    }
+    .clients_feedback_item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media (max-width:450px){
@@ -4478,7 +5103,23 @@
     .agency_testimonial_info .owl-prev, .agency_testimonial_info .owl-next{
         display: none;
     }
-    
+    .event_banner_content h2{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .event_banner_content h6{
+        font-size: 17px;
+    }
+    .event_schedule_inner .event_tab .nav-item + .nav-item{
+        margin-left: 5px;
+    }
+    .tracking_pr_item .tracking_content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .tracking_pr_item .tracking_content h3{
+        font-size: 25px;
+    }
 }
 
 @media (max-width:400px){

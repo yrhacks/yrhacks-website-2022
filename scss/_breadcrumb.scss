@@ -28,6 +28,8 @@
         top: 0;
         z-index: -1;
         height: 100%;
+        width: 100%;
+        background-size: cover;
     }
     .bubble{
         li{
@@ -178,6 +180,7 @@
         background-image: -ms-linear-gradient( -140deg, rgb(94,44,237) 0%, rgb(128,55,218) 100%);
         opacity: 0.90;
         z-index: -1;
+        top: 0;
     }
     .breadcrumb_content_two{
         color: #fff;

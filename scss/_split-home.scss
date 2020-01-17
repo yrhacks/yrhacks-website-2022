@@ -20,6 +20,18 @@
         background-image: -o-linear-gradient(310deg, rgb(103,18,168) 0%, rgb(95,40,251) 100%);
         background-image: linear-gradient(40deg, rgb(103,18,168) 0%, rgb(95,40,251) 100%);
     }   
+    &.section_8{
+        position: relative;
+        .split_banner{
+            background: url("../img/new/home-split/mobile_bg.jpg") no-repeat center top; 
+            background-size: cover;   
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 .height{
     height: 100%;

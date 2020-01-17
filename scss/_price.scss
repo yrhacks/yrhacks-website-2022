@@ -697,7 +697,7 @@
 
 
 /*============== priceing_area_four css ============*/
-.priceing_area_four{
+.pricing_area_four{
     .sec_title{
         margin-bottom: 50px;
         h2{
@@ -731,6 +731,7 @@
                 margin-bottom: 0;
                 font-size: 14px;
                 font-weight: 400;
+                color: #fff;
             }
             &:nth-child(2){
                 background: #0ed1b3;
@@ -744,6 +745,7 @@
             h5{
                 font-size: 20px;
                 font-weight: 600;
+                color: #fff;
             }
         }
     }
@@ -781,7 +783,7 @@
                 top: 0;
                 font-family: eleganticons;
                 color: #afb5c7;
-                transition: color 0.2s linear;
+                transition: color 0s linear;
             }
             &:hover{
                 &:before{
@@ -817,9 +819,9 @@
 }
 .tooltip{
     .tooltip-inner{
-        background-color: #fff;
+        background-color: #fff !important;
         opacity: 1;
-        color: #111;
+        color: #111 !important;
         opacity: 1;
         box-shadow: 0px 20px 40px 0px rgba(12, 0, 46, 0.14);
         font-size: $pop;
@@ -831,4 +833,48 @@
     &.bs-tooltip-top .arrow:before {
         border-top-color: #fff;
     }
+    &.bs-tooltip-bottom .arrow:before {
+        border-bottom-color: #fff;
+    }
+    &.show{
+        opacity: 1;
+    }
 }
+
+.price_info_three{
+    .price_head{
+        .p_head{
+            &:nth-child(2){
+                background: #fba820;
+            }
+            &:nth-child(3){
+                background: #e63779;
+            }
+            &:nth-child(4){
+                background: #0e79de;
+            }
+        }
+    }
+    .price_item{
+        h5{
+            color: #2c2c51;
+        }
+        .pr_title{
+            &:hover{
+                &:before{
+                    color: #26da15;
+                }
+            }    
+        }
+        .check{
+            color: #0e79de;    
+        }
+        .cros{
+            color: #fc3f48;
+        }
+    } 
+    .price_btn:hover{
+        background: #0e79de;
+        border-color: #0e79de;
+    }
+}  

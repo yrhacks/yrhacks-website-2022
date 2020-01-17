@@ -1,3 +1,4 @@
+/*================= map_area  ====================*/
 .map_area{
     height: 552px;
     position: relative;
@@ -387,11 +388,7 @@
     min-height: 600px;
     background: #fbfbfd;
     display: flex;
-    flex-wrap: wrap;
-//    .saasland_col_6 {
-//        width: 50%;
-//        position: relative;
-//    }   
+    flex-wrap: wrap;  
     .saasland_bg{
         position: absolute;
         width: 100%;
@@ -465,16 +462,6 @@
     width: 60%;
     position: relative;
     z-index: 1;
-    .saasland_bg{
-        position: absolute;
-        content: "";
-        width: 500px;
-        height: 100%;
-        background: #fbfbfd;
-        left: -1px;
-        z-index: -1;
-        clip-path: polygon(0px 100%, 0px 0px, 95% 0px, 0% 100%);
-    }
     .clock{
         position: absolute;
         bottom: 190px;
@@ -520,7 +507,7 @@
                     padding: 0px 5px;
                     transition: color 0.4s linear;
                     &:hover{
-                        color: #6754e2;
+                        color: #fff;
                     }
                 }
             }

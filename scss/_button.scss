@@ -270,17 +270,11 @@
 }
 
 .btn_six{
-    background: #17c7bd;
     font-size: 15px;
     border: 1px solid #17c7bd;
     padding: 13px 35px;
-    color: #fff;
     transition: all 0.3s linear;
     display: inline-block;
-    &:hover{
-        background: #ebfaf9;
-        color: #17c7bd;
-    }
     & + .btn_six{
         background: #ebfaf9;
         color: #17c7bd;
