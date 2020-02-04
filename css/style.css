@@ -2702,7 +2702,7 @@ h3 {
 
 /* line 30, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .contact-info .media-body h3 a:hover {
-  color: #ff5e13;
+  color: #FBA6BA;
 }
 
 /* line 36, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
@@ -2832,7 +2832,7 @@ h3 {
 
 /* line 146, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_contact.scss */
 .contact-section .btn_2:hover {
-  background-color: #ff5e13;
+  background-color: #FBA6BA;
 }
 
 /* line 75, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
@@ -3025,28 +3025,28 @@ h6 {
 /* line 217, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .genric-btn.primary {
   color: #fff;
-  background: #ff5e13;
+  background: #FBA6BA;
   border: 1px solid transparent;
 }
 
 /* line 221, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .genric-btn.primary:hover {
-  color: #ff5e13;
-  border: 1px solid #ff5e13;
+  color: #FBA6BA;
+  border: 1px solid #FBA6BA;
   background: #fff;
 }
 
 /* line 227, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .genric-btn.primary-border {
-  color: #ff5e13;
-  border: 1px solid #ff5e13;
+  color: #FBA6BA;
+  border: 1px solid #FBA6BA;
   background: #fff;
 }
 
 /* line 231, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #ff5e13;
+  background: #FBA6BA;
   border: 1px solid transparent;
 }
 
@@ -3204,7 +3204,7 @@ h6 {
 .generic-blockquote {
   padding: 30px 50px 30px 30px;
   background: #f9f9ff;
-  border-left: 2px solid #ff5e13;
+  border-left: 2px solid #FBA6BA;
 }
 
 /* line 353, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
@@ -3359,7 +3359,7 @@ h6 {
   position: absolute;
   width: 14px;
   height: 14px;
-  border: 3px solid #ff5e13;
+  border: 3px solid #FBA6BA;
   background: #fff;
   top: 4px;
   left: 0;
@@ -3374,7 +3374,7 @@ h6 {
 /* line 475, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .ordered-list li {
   list-style-type: decimal-leading-zero;
-  color: #ff5e13;
+  color: #FBA6BA;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -3389,7 +3389,7 @@ h6 {
 .ordered-list-alpha li {
   margin-left: 30px;
   list-style-type: lower-alpha;
-  color: #ff5e13;
+  color: #FBA6BA;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -3404,7 +3404,7 @@ h6 {
 .ordered-list-roman li {
   margin-left: 30px;
   list-style-type: lower-roman;
-  color: #ff5e13;
+  color: #FBA6BA;
   font-weight: 500;
   line-height: 1.82em !important;
 }
@@ -3487,7 +3487,7 @@ h6 {
 /* line 568, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .single-input-primary:focus {
   outline: none;
-  border: 1px solid #ff5e13;
+  border: 1px solid #FBA6BA;
 }
 
 /* line 574, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
@@ -3555,7 +3555,7 @@ h6 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #ff5e13;
+  background: #FBA6BA;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -3646,7 +3646,7 @@ h6 {
 
 /* line 696, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .primary-switch input:checked + label:before {
-  background: #ff5e13;
+  background: #FBA6BA;
 }
 
 /* line 704, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
@@ -4033,13 +4033,13 @@ h6 {
 
 /* line 1022, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .default-select .nice-select .list .option.selected {
-  color: #ff5e13;
+  color: #FBA6BA;
   background: transparent;
 }
 
 /* line 1026, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .default-select .nice-select .list .option:hover {
-  color: #ff5e13;
+  color: #FBA6BA;
   background: transparent;
 }
 
@@ -4096,13 +4096,13 @@ h6 {
 
 /* line 1067, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .form-select .nice-select .list .option.selected {
-  color: #ff5e13;
+  color: #FBA6BA;
   background: transparent;
 }
 
 /* line 1071, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_elements.scss */
 .form-select .nice-select .list .option:hover {
-  color: #ff5e13;
+  color: #FBA6BA;
   background: transparent;
 }
 
