@@ -128,11 +128,13 @@ h6 a {
 ul {
   margin: 0px;
   padding: 0px;
+
 }
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
 li {
   list-style: none;
+  list-style-type: circle;
 }
 
 /* line 64, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_reset.scss */
