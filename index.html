@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="https://d3js.org/d3-delaunay.v5.js"></script> -->
+  </script>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -35,6 +38,7 @@
         <![endif]-->
 
     <!-- header-start -->
+    <canvas id="voronoi"></canvas>
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area ">
@@ -418,10 +422,10 @@
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"
                                 style="">
                                 <div class="card-body">
-                                    A hackathon is a timed, often 24 hour, event in which teams of student hackers develop a technological solution to a problem. 
-                                    Problems can be themed (provided by a hackathon partner), or selected by the student team themselves. 
-                                    <br><br>During the event, student hackers will have access to a workshops, team building activities, free food, swag, and resources for hacking. 
-                                    At the end of the event each team will pitch their project to an industry representative and be evaluated. 
+                                    A hackathon is a timed, often 24 hour, event in which teams of student hackers develop a technological solution to a problem.
+                                    Problems can be themed (provided by a hackathon partner), or selected by the student team themselves.
+                                    <br><br>During the event, student hackers will have access to a workshops, team building activities, free food, swag, and resources for hacking.
+                                    At the end of the event each team will pitch their project to an industry representative and be evaluated.
                                     <br><br>Top teams will win incredible prizes!
                                     <br><br>A virtual hackathon is the same thing, except it is hosted entirely virtually! That means that all events and
                                     workshops will be hosted online, for the safety of the students and leaders.
@@ -476,10 +480,10 @@
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                 data-parent="#accordion" style="">
                                 <div class="card-body">
-                                    Please check with your school's computer science department first, if possible. 
+                                    Please check with your school's computer science department first, if possible.
                                     In the case that they aren't aware of YRHacks, notify your computer science teacher of the event.
                                     If other students at your school would like to come, ask your computer science teachers to register through our website.
-                                    If you cannot get a teacher to register at your school, please contact us at the Contact form down below. 
+                                    If you cannot get a teacher to register at your school, please contact us at the Contact form down below.
                                 </div>
                             </div>
                         </div> -->
@@ -517,7 +521,7 @@
                                     <br><br>
                                     If you want to aim for a prize, teams should ideally consist of students who have previous knowledge in computer
                                     programming.
-                                    As project planning and pitching is important in hackathons, it may be beneficial to have a business student on the team. 
+                                    As project planning and pitching is important in hackathons, it may be beneficial to have a business student on the team.
                                     <br><br>
                                 </div>
                             </div>
@@ -766,7 +770,7 @@
                                     Richmond Hill High School <br>
                                     201 Yorkland St, Richmond Hill ON<br>
                                     <a href = "mailto: rhhshillhacks@gmail.com" style="color: white;">rhhshillhacks@gmail.com</a>
-                                    
+
                                 </p>
                             </div>
                         </div> -->
@@ -779,7 +783,7 @@
                                     <li><a target="_blank" href="https://www.facebook.com/Hill-Hacks-101407284764250/">Facebook</a></li>
                                     <li><a target="_blank" href="https://www.instagram.com/hillhacks/">Instagram</a></li>
                                 </ul>
-    
+
                             </div>
                         </div> -->
                     </div>
@@ -838,6 +842,7 @@
 
     <script src="js/custom.js"></script>
     <script src="js/lazysizes.min.js"></script>
+    <script src="js/voronoi-background.js"></script>
 
 </body>
 
