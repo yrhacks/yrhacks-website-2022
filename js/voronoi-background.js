@@ -3,10 +3,10 @@ const config = {
   gradientStart: "#659dcf",
   gradientBetween: "#4d4ea1",
   gradientEnd: "#6e49a6",
-  maxVelocity: 0.1,
+  maxVelocity: 0.2,
   strokeStyle: "#453a7d",
   strokeWidth: 0.5,
-  framerate: 60,
+  framerate: 45,
 };
 
 class VoronoiPoint {
