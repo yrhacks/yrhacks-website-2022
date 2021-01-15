@@ -424,9 +424,9 @@ h3 {
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  border: 3px solid #5fB346;
+  border: 3px solid #86a3c3;
   text-align: center;
-  color: #5fB346 !important;
+  color: #86a3c3 !important;
 }
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -2433,6 +2433,7 @@ h3 {
 
 /* line 139, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right {
+  background-color:#26406b;
   font-size: 16px;
   color: #fff;
   margin-bottom: 0;
