@@ -1,8 +1,5 @@
 const config = {
-  numPoints: 50,
-  gradientStart: "#659dcf",
-  gradientBetween: "#4d4ea1",
-  gradientEnd: "#6e49a6",
+  gradient: ["#659dcf", "#4d4ea1", "#6e49a6"],
   maxVelocity: 0.2,
   strokeStyle: "#453a7d",
   strokeWidth: 0.5,
@@ -10,86 +7,144 @@ const config = {
 };
 
 class VoronoiPoint {
-  constructor(dx, dy, k) {
+  constructor(dx, dy, k, maxX, maxY) {
+    this.x = Math.random()*maxX;
+    this.y = Math.random()*maxY;
     this.dx = dx;
     this.dy = dy;
     this.colour = VoronoiPoint.colourRamp(k);
+    this.pMaxX = maxX;
+    this.pMaxY = maxY;
+    this.maxX = maxX;
+    this.maxY = maxY;
   }
+
+  toArray = () => [this.x, this.y];
+
+  setMaxY = (maxY) => {
+    this.pMaxY = this.maxY;
+    this.maxY = maxY;
+  };
+
+  setMaxX = (maxX) => {
+    this.pMaxX = this.maxX;
+    this.maxX = maxX;
+  };
+
+  rescale = () => {
+    this.x *= this.maxX/this.pMaxX;
+    this.y *= this.maxY/this.pMaxY;
+  };
 }
 
 VoronoiPoint.colourRamp = d3.piecewise(
   d3.interpolateRgb.gamma(1.6),
-  [config.gradientStart, config.gradientBetween, config.gradientEnd]
+  config.gradient
 );
 
-
-const main = document.getElementById("main-voronoi");
-const mid = document.getElementById("mid-voronoi");
-const footer = document.getElementById("footer-voronoi");
-
-
-const setCanvasSizes = () => {
-  main.width = document.documentElement.clientWidth;
-  main.height = window.innerHeight;
-
-  mid.width = document.documentElement.clientWidth;
-  mid.height = document.getElementById("register").getBoundingClientRect().height;
-
-  footer.width = document.documentElement.clientWidth;
-  footer.height = document.getElementById("footer").getBoundingClientRect().height;
-};
-
-setCanvasSizes();
-
-window.addEventListener('resize', setCanvasSizes);
-
-const canvases = [main, mid, footer];
-const redraws = canvases.map(canvas => {
-  const ctx = canvas.getContext("2d");
-
-  const points = Array(config.numPoints)
-    .fill()
-    .map(() => new VoronoiPoint(
-      Math.random()*config.maxVelocity*2 - config.maxVelocity,
-      Math.random()*config.maxVelocity*2 - config.maxVelocity,
-      Math.random(),
-    ));
-
-  const delaunay = d3.Delaunay.from(
-    Array(config.numPoints)
+class VoronoiCanvas {
+  constructor(canvas, numPoints, getDimension) {
+    this.getDimension = getDimension;
+    this.canvas = canvas;
+    this.canvas.width = this.getDimension().width;
+    this.canvas.height = this.getDimension().height;
+    this.ctx = this.canvas.getContext('2d');
+    this.numPoints = numPoints;
+    this.points = Array(numPoints)
       .fill()
-      .map(() => [
-        Math.random() * canvas.width,
-        Math.random() * canvas.height,
-      ]),
-  );
-  const voronoi = delaunay.voronoi(
-    [0, 0, canvas.width, canvas.height],
-  );
+      .map(() => new VoronoiPoint(
+        Math.random()*config.maxVelocity*2 - config.maxVelocity,
+        Math.random()*config.maxVelocity*2 - config.maxVelocity,
+        Math.random(),
+        this.canvas.width,
+        this.canvas.height
+      ));
+    this.delaunay = this.getDelaunay();
+    this.voronoi = this.getVoronoi();
+    this.intervalId = window.setInterval(this.redraw, 1000/config.framerate);
+  }
 
-  ctx.strokeStyle = config.strokeStyle;
-  ctx.lineWidth = config.strokeWidth;
+  getDelaunay = () => {
+    return d3.Delaunay.from(
+      this.points.map(point => point.toArray())
+    );
+  };
 
-  const redraw = () => {
-    voronoi.update();
+  getVoronoi = () => {
+    return this.delaunay.voronoi(
+      [0, 0, this.canvas.width, this.canvas.height],
+    );
+  };
 
-    for (const cell of voronoi.cellPolygons()) {
-      let point = points[cell.index];
+  resize = () => {
+    this.canvas.width = this.getDimension().width;
+    this.canvas.height = this.getDimension().height;
+    this.ctx = this.canvas.getContext('2d');
+    this.points.forEach(point => {
+      point.setMaxX(this.canvas.width);
+      point.setMaxY(this.canvas.height);
+      point.rescale();
+    });
+    this.delaunay = this.getDelaunay();
+    this.voronoi = this.getVoronoi();
+  };
 
-      ctx.fillStyle = point.colour;
-      ctx.beginPath();
-      voronoi.renderCell(cell.index, ctx);
-      ctx.fill();
-      ctx.stroke();
+  redraw = () => {
+    this.voronoi.update();
+    this.ctx.strokeStyle = config.strokeStyle;
+    this.ctx.lineWidth = config.strokeWidth;
+
+    for (const cell of this.voronoi.cellPolygons()) {
+      let point = this.points[cell.index];
+
+      this.ctx.fillStyle = point.colour;
+      this.ctx.beginPath();
+      this.voronoi.renderCell(cell.index, this.ctx);
+      this.ctx.fill();
+      this.ctx.stroke();
 
       let i = cell.index*2;
-      delaunay.points[i] += point.dx;
-      delaunay.points[i] = delaunay.points[i]%canvas.width;
-      delaunay.points[i+1] += point.dy;
-      delaunay.points[i+1] = delaunay.points[i+1]%canvas.height;
+      this.delaunay.points[i] += point.dx;
+      this.delaunay.points[i] = this.delaunay.points[i]%this.canvas.width;
+      this.delaunay.points[i+1] += point.dy;
+      this.delaunay.points[i+1] = this.delaunay.points[i+1]%this.canvas.height;
     }
   }
-  return redraw;
-});
+}
 
-window.setInterval(() => redraws.forEach(redraw => redraw()), 1000/config.framerate);
+
+const voronoiCanvases = [
+  new VoronoiCanvas(
+    document.getElementById("main-voronoi"),
+    50,
+    () => {
+      return {
+        width: document.documentElement.clientWidth,
+        height: window.innerHeight,
+      }
+    },
+  ),
+  new VoronoiCanvas(
+    document.getElementById("mid-voronoi"),
+    40,
+    () => {
+      return {
+        width: document.documentElement.clientWidth,
+        height: document.getElementById("register").getBoundingClientRect().height,
+      }
+    },
+  ),
+  new VoronoiCanvas(
+    document.getElementById("footer-voronoi"),
+    30,
+    () => {
+      return {
+        width: document.documentElement.clientWidth,
+        height: document.getElementById("footer").getBoundingClientRect().height,
+      }
+    },
+  ),
+];
+
+window.addEventListener('resize', () => voronoiCanvases.forEach(canvas => canvas.resize()));
+

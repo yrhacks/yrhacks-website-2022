@@ -5852,4 +5852,20 @@ h6 {
 .button-contactForm {
   cursor: pointer;
 }
+
+.button-contactForm:hover {
+  background-color: #4d4ea1;
+}
+
+.menu:hover {
+  color:#33346b !important;
+}
+
+.main-header-area.sticky {
+  transition: ease-in-out;
+}
+
+.header-area .main-header-area.sticky {
+  background-color: #171b36;
+}
 /*# sourceMappingURL=style.css.map */
