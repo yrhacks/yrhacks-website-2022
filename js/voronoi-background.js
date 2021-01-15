@@ -105,9 +105,9 @@ class VoronoiCanvas {
 
       let i = cell.index*2;
       this.delaunay.points[i] += point.dx;
-      this.delaunay.points[i] = this.delaunay.points[i]%this.canvas.width;
+      this.delaunay.points[i] = Math.abs(this.delaunay.points[i]%this.canvas.width);
       this.delaunay.points[i+1] += point.dy;
-      this.delaunay.points[i+1] = this.delaunay.points[i+1]%this.canvas.height;
+      this.delaunay.points[i+1] = Math.abs(this.delaunay.points[i+1]%this.canvas.height);
     }
     window.requestAnimationFrame(this.redraw);
   }
