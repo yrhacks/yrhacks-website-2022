@@ -18,11 +18,11 @@
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff9600+0,fe531e+26,c022a5+57,1bb8f9+100 */
   background: #ff9600;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: -moz-linear-gradient(top, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: -webkit-linear-gradient(top, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: linear-gradient(to bottom, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#1bb8f9',GradientType=0 );
   /* IE6-9 */
@@ -31,13 +31,13 @@
 /* line 23, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_extend.scss */
 .event_area .double_line::before, .event_area .double_line::after {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff9600+0,fe531e+26,c022a5+57,1bb8f9+100 */
-  background: #5FB346;
+  background: #86a3c3;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: -moz-linear-gradient(left, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: -webkit-linear-gradient(left, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #5FB346 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
+  background: linear-gradient(to right, #86a3c3 0%, #73D0E2 26%, #b7AAD6 57%, #FBA6BA 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9600', endColorstr='#1bb8f9',GradientType=1 );
   /* IE6-9 */
@@ -431,9 +431,9 @@ h3 {
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #5fB346;
+  background: #86a3c3;
   color: #fff !important;
-  border: 1px solid #5fB346;
+  border: 1px solid #86a3c3;
 }
 
 /* line 20, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -449,24 +449,24 @@ h3 {
 /* line 27, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red {
   background: #fff;
-  color: #5FB346;
+  color: #86a3c3;
   display: inline-block;
   padding: 16px 44px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  border: 2px solid #5FB346;
+  border: 2px solid #86a3c3;
   text-align: center;
-  color: #5FB346 !important;
+  color: #86a3c3 !important;
   text-transform: capitalize;
 }
 
 /* line 41, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
 .boxed-btn-red:hover {
-  background: #5FB346;
+  background: #86a3c3;
   color: #fff !important;
-  border: 2px solid #5FB346;
+  border: 2px solid #86a3c3;
 }
 
 /* line 46, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -715,12 +715,12 @@ h3 {
 /* line 28, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #457D2D;
+  color: #7289da;
 }
 
 /* line 32, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: #457D2D;
+  color: #7289da;
 }
 
 @media (max-width: 767px) {
@@ -925,12 +925,12 @@ h3 {
 
 /* line 92, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a:hover {
-  color: #457D2D;
+  color: #7289da;
 }
 
 /* line 95, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a.active {
-  color: #457D2D;
+  color:#7289da;
 }
 
 /* line 99, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_header.scss */
@@ -1510,7 +1510,7 @@ h3 {
 /* line 79, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_about.scss */
 .about_area .about_info .about_list li::before {
   content: "";
-  background: #02c856;
+  background: #7289da;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -1749,7 +1749,7 @@ h3 {
   height: 100%;
   left: 0;
   bottom: 0;
-  background: rgba(69, 125, 45, 0.5);
+  background: rgba(134,163,195,0.5);
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1789,7 +1789,7 @@ h3 {
   display: inline-block;
   line-height: 50px;
   font-size: 17px;
-  color: #5FB346;
+  color: #86a3c3;
   margin: 0 7px;
 }
 
@@ -1810,7 +1810,7 @@ h3 {
 .speakers_area .single_speaker .speaker_name p {
   margin-bottom: 0;
   font-size: 16px;
-  color: #5FB346;
+  color: #86a3c3;
   font-weight: 400;
 }
 
@@ -2156,7 +2156,7 @@ h3 {
 .event_area .date h3 {
   font-size: 26px;
   font-weight: 500;
-  color: #5FB346;
+  color: #86a3c3;
 }
 
 @media (max-width: 767px) {
