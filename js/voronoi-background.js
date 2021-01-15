@@ -61,7 +61,7 @@ class VoronoiCanvas {
       ));
     this.delaunay = this.getDelaunay();
     this.voronoi = this.getVoronoi();
-    this.intervalId = window.setInterval(this.redraw, 1000/config.framerate);
+    this.redraw();
   }
 
   getDelaunay = () => {
@@ -109,6 +109,7 @@ class VoronoiCanvas {
       this.delaunay.points[i+1] += point.dy;
       this.delaunay.points[i+1] = this.delaunay.points[i+1]%this.canvas.height;
     }
+    window.requestAnimationFrame(this.redraw);
   }
 }
 
