@@ -1,73 +1,92 @@
-
-const canvas = d3.select("canvas").node();
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-const context = canvas.getContext("2d");
-const width = canvas.width;
-const height = canvas.height;
-
-const colours = [
-  "#B6CEC7",
-  "#D8E0BB",
-  "#86A3C3",
-  "#7268A6",
-  "453A7D",
-  "6B3074"
-];
-
-const sites = d3.range(200)
-    .map(() => [Math.random() * width, Math.random() * height]);
-
-const randomColours = d3.range(200)
-    .map(() => colours[Math.floor(Math.random()*colours.length)]);
-
-
-const velocity = d3.range(200).map(() => {
-  return {
-    x: Math.random()*1-0.5,
-    y: Math.random()*1-0.5,
-  };
-});
-const voronoi = d3.voronoi()
-    .extent([[-1, -1], [width + 1, height + 1]]);
-
-
-window.setInterval(() => {
-  redraw();
-}, 30);
-
-function redraw() {
-  const diagram = voronoi(sites);
-  const polygons = diagram.polygons();
-  move();
-
-  context.clearRect(0, 0, width, height);
-
-  for (var i = 0, n = polygons.length; i < n; ++i) {
-    context.beginPath();
-    drawCell(polygons[i]);
-    context.fillStyle = randomColours[i];
-    context.fill();
-  }
-
-}
-
-const move = () => {
-  sites.forEach((point, i) => {
-    point[0] += velocity[i].x;
-    point[0] = point[0] % width;
-    point[1] += velocity[i].y;
-    point[1] = point[1] % height;
-  });
+const config = {
+  numPoints: 50,
+  gradientStart: "#659dcf",
+  gradientBetween: "#4d4ea1",
+  gradientEnd: "#6e49a6",
+  maxVelocity: 0.1,
+  strokeStyle: "#453a7d",
+  strokeWidth: 0.5,
+  framerate: 60,
 };
 
-const drawCell = () => {
-  if (!sites) return false;
-  context.moveTo(sites[0][0], sites[0][1]);
-  for (let j = 1, m = sites.length; j < m; ++j) {
-    context.lineTo(sites[j][0], sites[j][1]);
+class VoronoiPoint {
+  constructor(dx, dy, k) {
+    this.dx = dx;
+    this.dy = dy;
+    this.colour = VoronoiPoint.colourRamp(k);
   }
-  context.closePath();
-  return true;
 }
+
+
+// VoronoiPoint.colourRamp = d3.interpolateLab(
+//   config.gradientStart,
+//   config.gradientEnd,
+// );
+VoronoiPoint.colourRamp = d3.piecewise(
+  d3.interpolateRgb.gamma(1.6),
+  [config.gradientStart, config.gradientBetween, config.gradientEnd]
+);
+
+
+const main = document.getElementById("main-voronoi");
+main.width = document.documentElement.clientWidth;
+main.height = window.innerHeight;
+
+const mid = document.getElementById("mid-voronoi");
+mid.width = document.documentElement.clientWidth;
+mid.height = document.getElementById("register").getBoundingClientRect().height;
+
+const footer = document.getElementById("footer-voronoi");
+footer.width = document.documentElement.clientWidth;
+footer.height = document.getElementById("footer").getBoundingClientRect().height;
+
+const canvases = [main, mid, footer];
+const redraws = canvases.map(canvas => {
+  const ctx = canvas.getContext("2d");
+
+  const points = Array(config.numPoints)
+    .fill()
+    .map(() => new VoronoiPoint(
+      Math.random()*config.maxVelocity*2 - config.maxVelocity,
+      Math.random()*config.maxVelocity*2 - config.maxVelocity,
+      Math.random(),
+    ));
+
+  const delaunay = d3.Delaunay.from(
+    Array(config.numPoints)
+      .fill()
+      .map(() => [
+        Math.random() * canvas.width,
+        Math.random() * canvas.height,
+      ]),
+  );
+  const voronoi = delaunay.voronoi(
+    [0, 0, canvas.width, canvas.height],
+  );
+
+  ctx.strokeStyle = config.strokeStyle;
+  ctx.lineWidth = config.strokeWidth;
+
+  const redraw = () => {
+    voronoi.update();
+
+    for (const cell of voronoi.cellPolygons()) {
+      let point = points[cell.index];
+
+      ctx.fillStyle = point.colour;
+      ctx.beginPath();
+      voronoi.renderCell(cell.index, ctx);
+      ctx.fill();
+      ctx.stroke();
+
+      let i = cell.index*2;
+      delaunay.points[i] += point.dx;
+      delaunay.points[i] = delaunay.points[i]%canvas.width;
+      delaunay.points[i+1] += point.dy;
+      delaunay.points[i+1] = delaunay.points[i+1]%canvas.height;
+    }
+  }
+  return redraw;
+});
+
+window.setInterval(() => redraws.forEach(redraw => redraw()), 1000/config.framerate);

@@ -1,0 +1,32 @@
+.voronoi {
+  position: absolute;
+  z-index: -4;
+}
+
+.main-header-area {
+
+}
+
+.header-area {
+  z-index: 10;
+}
+
+
+#main {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100vh;
+  color: #ad78c4;
+}
+
+.slider_area .title_text {
+  margin-top: 30vh;
+  margin-bottom: 2em;
+}
+
+
+.boxed-btn-white:hover {
+  /* cursor: pointer; */
+  background-color: transparent;
+  color: white;
+}
