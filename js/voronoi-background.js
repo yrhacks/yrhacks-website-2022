@@ -17,11 +17,6 @@ class VoronoiPoint {
   }
 }
 
-
-// VoronoiPoint.colourRamp = d3.interpolateLab(
-//   config.gradientStart,
-//   config.gradientEnd,
-// );
 VoronoiPoint.colourRamp = d3.piecewise(
   d3.interpolateRgb.gamma(1.6),
   [config.gradientStart, config.gradientBetween, config.gradientEnd]
