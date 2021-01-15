@@ -424,9 +424,9 @@ h3 {
   font-size: 16px;
   font-weight: 500;
   border: 0;
-  border: 3px solid #5fB346;
+  border: 3px solid #86a3c3;
   text-align: center;
-  color: #5fB346 !important;
+  color: #86a3c3 !important;
 }
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_btn.scss */
@@ -1060,7 +1060,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner_1.png);
+  background-image: url(../img/banner/bluebanner.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -1095,6 +1095,7 @@ h3 {
 
 /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .title_text {
+  color:#000000;
   position: relative;
   margin-bottom: 213px;
   z-index: 3;
@@ -1832,7 +1833,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_resister.scss */
 .resister_bg_1 {
-  background-image: url(../img/banner/resister.png);
+  background-image: url(../img/banner/bluebanner.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_resister.scss */
@@ -2238,7 +2239,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer_bg_1 {
-  background-image: url(../img/banner/footer_bg_1.png);
+  background-image: url(../img/banner/footer_bg_2.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2432,6 +2433,7 @@ h3 {
 
 /* line 139, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right {
+  background-color:#26406b;
   font-size: 16px;
   color: #fff;
   margin-bottom: 0;
