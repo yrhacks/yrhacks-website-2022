@@ -1060,7 +1060,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner_1.png);
+  background-image: url(../img/banner/bluebanner.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
@@ -1095,6 +1095,7 @@ h3 {
 
 /* line 22, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .title_text {
+  color:#000000;
   position: relative;
   margin-bottom: 213px;
   z-index: 3;
@@ -1832,7 +1833,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_resister.scss */
 .resister_bg_1 {
-  background-image: url(../img/banner/resister.png);
+  background-image: url(../img/banner/bluebanner.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_resister.scss */
