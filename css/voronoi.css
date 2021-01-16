@@ -14,8 +14,7 @@
 
 #main {
   padding-top: 0;
-  padding-bottom: 0;
-  height: 100vh;
+  min-height: 100vh;
   color: #ad78c4;
 }
 

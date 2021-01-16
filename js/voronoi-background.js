@@ -1,151 +1,161 @@
+"use strict";
+
 const config = {
+  framerate: 45,
   gradient: ["#659dcf", "#4d4ea1", "#6e49a6"],
-  maxVelocity: 0.2,
   strokeStyle: "#453a7d",
   strokeWidth: 0.5,
-  framerate: 45,
+  velocity: 0.01,
 };
 
 class VoronoiPoint {
-  constructor(dx, dy, k, maxX, maxY) {
-    this.x = Math.random()*maxX;
-    this.y = Math.random()*maxY;
-    this.dx = dx;
-    this.dy = dy;
-    this.colour = VoronoiPoint.colourRamp(k);
-    this.pMaxX = maxX;
-    this.pMaxY = maxY;
-    this.maxX = maxX;
-    this.maxY = maxY;
+  constructor(theta, colour) {
+    this._dx = config.velocity*Math.cos(theta);
+    this._dy = config.velocity*Math.sin(theta);
+
+    this.colour = VoronoiPoint.colourRamp(colour);
   }
 
-  toArray = () => [this.x, this.y];
+  updateX(x, elapsedTime, maxX) {
+    const newX = x + this._dx*elapsedTime;
+    if (newX < 0 || newX > maxX) {
+      this._dx *= -1;
+    }
 
-  setMaxY = (maxY) => {
-    this.pMaxY = this.maxY;
-    this.maxY = maxY;
-  };
+    return newX;
+  }
 
-  setMaxX = (maxX) => {
-    this.pMaxX = this.maxX;
-    this.maxX = maxX;
-  };
+  updateY(y, elapsedTime, maxY) {
+    const newY = y + this._dy*elapsedTime;
+    if (newY < 0 || newY > maxY) {
+      this._dy *= -1;
+    }
 
-  rescale = () => {
-    this.x *= this.maxX/this.pMaxX;
-    this.y *= this.maxY/this.pMaxY;
-  };
+    return newY;
+  }
 }
-
 VoronoiPoint.colourRamp = d3.piecewise(
-  d3.interpolateRgb.gamma(1.6),
-  config.gradient
+  d3.interpolateLab,
+  config.gradient,
 );
 
 class VoronoiCanvas {
-  constructor(canvas, numPoints, getDimension) {
-    this.getDimension = getDimension;
-    this.canvas = canvas;
-    this.canvas.width = this.getDimension().width;
-    this.canvas.height = this.getDimension().height;
-    this.ctx = this.canvas.getContext('2d');
-    this.numPoints = numPoints;
-    this.points = Array(numPoints)
-      .fill()
-      .map(() => new VoronoiPoint(
-        Math.random()*config.maxVelocity*2 - config.maxVelocity,
-        Math.random()*config.maxVelocity*2 - config.maxVelocity,
+  constructor(canvas, numPoints, parent) {
+    this._canvas = canvas;
+    this._ctx = this._canvas.getContext("2d");
+
+    this.parent = parent;
+    const dim = this.parent.getBoundingClientRect();
+    this._maxX = dim.width;
+    this._maxY = dim.height;
+
+    this._delaunay = d3.Delaunay.from(Array.from(
+      { length: numPoints },
+      () => [
+        Math.random()*this._maxX,
+        Math.random()*this._maxY,
+      ],
+    ));
+
+    this._points = Array.from(
+      { length: numPoints },
+      () => new VoronoiPoint(
+        Math.random()*2*Math.PI,
         Math.random(),
-        this.canvas.width,
-        this.canvas.height
-      ));
-    this.delaunay = this.getDelaunay();
-    this.voronoi = this.getVoronoi();
-    this.redraw();
+      ),
+    );
+
+    this.resizeCanvas();
+    window.requestAnimationFrame(this.redraw.bind(this));
   }
 
-  getDelaunay = () => {
-    return d3.Delaunay.from(
-      this.points.map(point => point.toArray())
-    );
-  };
+  resize(dim) {
+    const xScale = dim.inlineSize/this._maxX;
+    const yScale = dim.blockSize/this._maxY;
+    this._maxX = dim.inlineSize;
+    this._maxY = dim.blockSize;
 
-  getVoronoi = () => {
-    return this.delaunay.voronoi(
-      [0, 0, this.canvas.width, this.canvas.height],
-    );
-  };
+    this.resizeCanvas();
 
-  resize = () => {
-    this.canvas.width = this.getDimension().width;
-    this.canvas.height = this.getDimension().height;
-    this.ctx = this.canvas.getContext('2d');
-    this.points.forEach(point => {
-      point.setMaxX(this.canvas.width);
-      point.setMaxY(this.canvas.height);
-      point.rescale();
-    });
-    this.delaunay = this.getDelaunay();
-    this.voronoi = this.getVoronoi();
-  };
-
-  redraw = () => {
-    this.voronoi.update();
-    this.ctx.strokeStyle = config.strokeStyle;
-    this.ctx.lineWidth = config.strokeWidth;
-
-    for (const cell of this.voronoi.cellPolygons()) {
-      let point = this.points[cell.index];
-
-      this.ctx.fillStyle = point.colour;
-      this.ctx.beginPath();
-      this.voronoi.renderCell(cell.index, this.ctx);
-      this.ctx.fill();
-      this.ctx.stroke();
-
-      let i = cell.index*2;
-      this.delaunay.points[i] += point.dx;
-      this.delaunay.points[i] = Math.abs(this.delaunay.points[i]%this.canvas.width);
-      this.delaunay.points[i+1] += point.dy;
-      this.delaunay.points[i+1] = Math.abs(this.delaunay.points[i+1]%this.canvas.height);
+    for (let i = 0; i < this._delaunay.points.length-1; i += 2) {
+      this._delaunay.points[i] *= xScale;
+      this._delaunay.points[i+1] *= yScale;
     }
-    window.requestAnimationFrame(this.redraw);
+  }
+
+  redraw(timestamp) {
+    if (this._lastFrameTime === undefined) {
+      this._lastFrameTime = timestamp;
+    }
+    const elapsed = Math.min(timestamp-this._lastFrameTime, 100);
+    this._lastFrameTime = timestamp;
+
+    this._voronoi.update();
+
+    for (const cell of this._voronoi.cellPolygons()) {
+      const point = this._points[cell.index];
+
+      this._ctx.fillStyle = point.colour;
+      this._ctx.beginPath();
+      this._voronoi.renderCell(cell.index, this._ctx);
+      this._ctx.fill();
+      this._ctx.stroke();
+
+      const i = cell.index*2;
+      this._delaunay.points[i] = point.updateX(
+        this._delaunay.points[i],
+        elapsed,
+        this._maxX
+      );
+      this._delaunay.points[i+1] = point.updateY(
+        this._delaunay.points[i+1],
+        elapsed,
+        this._maxY
+      );
+    }
+
+    window.requestAnimationFrame(this.redraw.bind(this));
+  }
+
+  resizeCanvas() {
+    this._canvas.width = this._maxX;
+    this._canvas.height = this._maxY;
+
+    this._ctx.strokeStyle = config.strokeStyle;
+    this._ctx.lineWidth = config.strokeWidth;
+
+    this._voronoi = this._delaunay.voronoi([
+      0,
+      0,
+      this._maxX,
+      this._maxY,
+    ]);
   }
 }
-
 
 const voronoiCanvases = [
   new VoronoiCanvas(
     document.getElementById("main-voronoi"),
     50,
-    () => {
-      return {
-        width: document.documentElement.clientWidth,
-        height: window.innerHeight,
-      }
-    },
+    document.getElementById("main")
   ),
   new VoronoiCanvas(
     document.getElementById("mid-voronoi"),
-    40,
-    () => {
-      return {
-        width: document.documentElement.clientWidth,
-        height: document.getElementById("register").getBoundingClientRect().height,
-      }
-    },
+    35,
+    document.getElementById("register")
   ),
   new VoronoiCanvas(
     document.getElementById("footer-voronoi"),
     30,
-    () => {
-      return {
-        width: document.documentElement.clientWidth,
-        height: document.getElementById("footer").getBoundingClientRect().height,
-      }
-    },
+    document.getElementById("footer")
   ),
 ];
 
-window.addEventListener('resize', () => voronoiCanvases.forEach(canvas => canvas.resize()));
-
+voronoiCanvases.forEach((canvas) => {
+  const ro = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      canvas.resize(entry.borderBoxSize[0]);
+    }
+  });
+  ro.observe(canvas.parent);
+});
