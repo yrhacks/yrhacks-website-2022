@@ -5817,14 +5817,13 @@ h6 {
 
 .partner-box {
   background: transparent;
-  padding: 30px 20px;
+  padding: 10px 10px;
   margin: 10px;
   width: 14em;
   display: inline-block;
   text-align: center;
   font-size: larger;
   line-height: 1.7em;
-
 }
 
 .partner-box:hover {
@@ -5840,7 +5839,11 @@ h6 {
 }
 
 .big-partners {
-  font-size: 56px;
+  font-size: 88px;
+}
+
+.normal-partners {
+  font-size: 24px;
 }
 
 .partner-container {
