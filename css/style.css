@@ -5834,6 +5834,15 @@ h6 {
   box-sizing: border-box;
 }
 
+.board-partners {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.big-partners {
+  font-size: 56px;
+}
+
 .partner-container {
   justify-content: center;
 }
