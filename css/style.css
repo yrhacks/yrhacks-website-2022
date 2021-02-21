@@ -5846,6 +5846,10 @@ h6 {
   font-size: 24px;
 }
 
+.amd {
+  font-weight: 700
+}
+
 .partner-container {
   justify-content: center;
 }
