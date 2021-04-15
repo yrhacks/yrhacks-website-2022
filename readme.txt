@@ -1,1 +1,1 @@
-YRHacks Official Website.
+YRHacks Official Website
