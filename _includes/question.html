@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse"
+                data-target="#{{ question.collapse_id }}" aria-expanded="false" aria-controls="{{ question.collapse_id }}">
+                <img class="lazyload" data-src="img/brand/info.png" alt="?"> {{ question.question }}
+            </button>
+        </h5>
+    </div>
+    <div id="{{ question.collapse_id }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+            {{ question.answer }}
+        </div>
+    </div>
+</div>

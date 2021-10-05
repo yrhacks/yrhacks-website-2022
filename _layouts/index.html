@@ -109,13 +109,13 @@
                     <div class="col-xl-4 col-md-6 col-lg-4">
                         <div class="single_date">
                             <i class="ti-location-pin"></i>
-                            <span>Virtual</span>
+                            <span>{{ page.location }}</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="single_date">
                             <i class="ti-alarm-clock"></i>
-                            <span>check back later for more info!</span>
+                            <span>{{ page.time }}</span>
                         </div>
                     </div>
 
@@ -151,7 +151,7 @@
                             <span class="sub_heading">Introducing</span>
                             <h3>YRHacks!</h3>
                         </div>
-                        <p>:) :) :) :) we'll add info here later :) :) :)</p>
+                        <p>{{ page.details }}</p>
                         <!--a href="#speakers" class="boxed-btn smooth_scroll">Our Speakers</!--a-->
                     </div>
                 </div>
@@ -411,282 +411,9 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div id="accordion">
-
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="picture of students at a hackathon"> What is a virtual hackathon?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"
-                                style="">
-                                <div class="card-body">
-                                    A hackathon is a timed, often 24 hour, event in which teams of student hackers develop a technological solution to a problem.
-                                    Problems can be themed (provided by a hackathon partner), or selected by the student team themselves.
-                                    <br><br>During the event, student hackers will have access to a workshops, team building activities, free gifts, and resources for hacking.
-                                    At the end of the event each team will pitch their project to an industry representative and be evaluated.
-                                    <br><br>Top teams will win incredible prizes!
-                                    <br><br>A virtual hackathon is the same thing, except it is hosted entirely virtually! That means that all events and
-                                    workshops will be hosted online, for the safety of the students and leaders.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="false" aria-controls="collapseOne">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">Who can participate in YRHacks?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    YRHacks will is open to all YRDSB high school students!
-                                </div>
-                            </div>
-                        </div>
-<!--                        <div class="card">-->
-<!--                            <div class="card-header" id="headingZero">-->
-<!--                                <h5 class="mb-0">-->
-<!--                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseZero"-->
-<!--                                        aria-expanded="false" aria-controls="collapseZero">-->
-<!--                                        <img class="lazyload" data-src="img/brand/info.png" alt="">How do I register?-->
-<!--                                    </button>-->
-<!--                                </h5>-->
-<!--                            </div>-->
-<!--                            <div id="collapseZero" class="collapse" aria-labelledby="headingZero"-->
-<!--                                data-parent="#accordion" style="">-->
-<!--                                <div class="card-body">-->
-<!--                                    Since YRHacks will be a YRDSB only event, we will only be accepting YRDSB students with valid student numbers.-->
-<!--                                    <br><br>Please use the registration form provided above to register.-->
-<!--                                    <br><br>Students will need to sign a permission form to use Discord for this event.-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                        <!-- <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">Is my school registered?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    Please check with your school's computer science department first, if possible.
-                                    In the case that they aren't aware of YRHacks, notify your computer science teacher of the event.
-                                    If other students at your school would like to come, ask your computer science teachers to register through our website.
-                                    If you cannot get a teacher to register at your school, please contact us at the Contact form down below.
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">When is the registration deadline?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    We will let you know as soon as possible!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_4_5">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_4_5" aria-expanded="false"
-                                        aria-controls="collapse_4_5">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">How will teams work?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_4_5" class="collapse" aria-labelledby="heading_4_5"
-                                data-parent="#accordion" style="">
-                                <div class="card-body">
-                                    When registering, you can specify up to three other participants to form a team with them.
-                                    As a team, you will work on the same project, be judged together, and win prizes together!
-                                    <br><br>
-                                    If you want to work in a team but cannot find one prior to the event, a team formation event will be hosted during the hackathon.
-                                    <br><br>
-                                    You can also find a team after registering, even if you didn't specify any team members on the form. If you do so, you only need to let us know during the hackathon, before your project is judged.
-                                    <br><br>
-                                    You are able to form teams with anyone, regardless of school, SHSM, or any other factor, as long as they are YRDSB students. That means that a team can have a mix of SHSM and non-SHSM participants, or students in different schools.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_4">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt=""> How much experience is required?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion"
-                                style="">
-                                <div class="card-body">
-                                    No experience is required. First time coders and hackers are more than welcome, and this is a great opportunity to
-                                    expand your arsenal and get inspired!
-                                    <br><br>
-                                    If you want to aim for a prize, teams would ideally consist of students who have previous knowledge in computer
-                                    programming.
-                                    As project planning and pitching is important in hackathons, it may be beneficial to have a business student on the team.
-                                    <br><br>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_5">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt=""> What equipment should I own?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordion"
-                                style="">
-                                <div class="card-body">
-                                    All the equipment you need is a computer or laptop, and an internet connection!
-                                    You will need the IDE, game engine, compilers, etc. of your choice.
-                                    Also make sure you are able to use ZOOM and Discord, which will be the two main platforms used during this hackathon.
-                                    If you are not comfortable with using Discord, as it is a non-board approved platform, board-approved tools will be provided as an equal alternative.
-                                </div> <!-- make sure to change google meet if we change conferencing software -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_6">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt=""> How much does this event cost?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_6" class="collapse" aria-labelledby="heading_6" data-parent="#accordion"
-                                style="">
-                                <div class="card-body">
-                                    The cost of this event is free! Funding is provided by the SHSM program and YRDSB. Some prizes are provided by our generous partners!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_7">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_7" aria-expanded="false" aria-controls="collapse_7">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt=""> When and where will the event take place?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_7" class="collapse" aria-labelledby="heading_7" data-parent="#accordion"
-                                style="">
-                                <div class="card-body">
-                                    Wonderful question! We don't actually know yet but we'll tell you later!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_8">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_8" aria-expanded="false" aria-controls="collapse_8">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">Will food be provided?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_8" class="collapse" aria-labelledby="heading_8" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sadly, due to the nature of a virtual hackathon, we will not be providing any food to our participants.
-                                    However, we will still be providing lots of prizes that you can look forward to!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_9">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_9" aria-expanded="false" aria-controls="collapse_9">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">Do I need a teacher supervisor?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_9" class="collapse" aria-labelledby="heading_9" data-parent="#accordion">
-                                <div class="card-body">
-                                    No, you are not required to provide a teacher supervisor. However, if a teacher helped you form your team, please mention them on the registration form. This will help us coordinate teacher supervisors later!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_10">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_10" aria-expanded="false" aria-controls="collapse_10">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">What are mentors?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_10" class="collapse" aria-labelledby="heading_10" data-parent="#accordion">
-                                <div class="card-body">
-                                    Mentors are people who are experienced in programming, design, and idea formation, and are there to support you throughout the event.
-                                    <br><br>
-                                    During the event, you will have the chance to request mentors to help you on your design, brainstorm ideas with you, debug your code, design a pitch, set up new technologies, and more!
-                                    <br><br>
-                                    During the event, don't be afraid to work with a mentor to resolve a problem!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="heading_11">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_11" aria-expanded="false" aria-controls="collapse_11">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">What are volunteers?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_11" class="collapse" aria-labelledby="heading_11" data-parent="#accordion">
-                                <div class="card-body">
-                                    Volunteers are the people who lead activities and help out during judging!
-                                    <br><br>
-                                    Throughout the event, fun activities will be hosted like trivia. Volunteers will be running these activities! Also, during judging, before any live pitches, they will be the ones doing mic checks and offering last words of encouragement. Don't be afraid to say hi to them!
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="card">
-                            <div class="card-header" id="heading_10">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapse_10" aria-expanded="false" aria-controls="collapse_10">
-                                        <img class="lazyload" data-src="img/brand/info.png" alt="">Why is registration closed?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse_10" class="collapse" aria-labelledby="heading_10" data-parent="#accordion">
-                                <div class="card-body">
-                                    We are working closely with YRDSB to resolve any concerns raised about the form, and are currently reviewing everything. As a result, we had to close the form for a few
-                                    <br><br>
-                                    Do not worry, the deadline will be extended!
-                                </div>
-                            </div>
-                        </div> -->
+                        {% for question in site.data.faq.questions %}
+                            {% include question.html %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
