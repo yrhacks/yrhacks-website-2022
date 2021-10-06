@@ -1,0 +1,52 @@
+board_partners:
+  - name: York Region District School Board (YRDSB)
+    link: http://www.yrdsb.ca/Pages/default.aspx
+  
+  - name: Ontario Specialist High Skills Major (SHSM)
+    link: https://ontario.ca/shsm
+
+normal_partners:
+  - name: IBM
+    link: https://www.ibm.com/ca-en/
+
+  - name: Huawei
+    link: https://www.huawei.com/ca/
+
+  - name: Immigrant Youth Center
+    link: http://www.cicsiyc.org/
+
+  - name: Staples
+    link: https://www.staples.ca/
+
+  - name: EchoAR
+    link: https://www.echoar.xyz/
+  
+  - name: Repl.it
+    link: https://repl.it/
+
+  - name: Voiceflow
+    link: https://www.voiceflow.com/
+
+  - name: Co:here Neural Network
+    link: https://www.linkedin.com/company/cohere-ai/
+
+  - name: HackStudent
+    link: https://toronto.hackstudent.com/
+
+  - name: CockroachDB
+    link: https://www.cockroachlabs.com/
+
+  - name: StickerGiant
+    link: https://www.stickergiant.com/
+
+  - name: The Canadian Youth Champions
+    link: https://www.thecyc.org/
+
+  - name: Triway Education Center
+    link: https://triwayeducation.com/
+
+  - name: EdgePrim
+    link: https://edgeprim.com/
+
+  - name: Best @ YorkU
+    link: https://lassonde.yorku.ca

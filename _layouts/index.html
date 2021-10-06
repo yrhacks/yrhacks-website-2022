@@ -468,12 +468,11 @@
                </div>
            </div>
            <div class="row partner-container board-partners">
-                <a href="http://www.yrdsb.ca/Pages/default.aspx" target="_blank" class="partner-box">
-                    York Region District School Board (YRDSB)
+               {% for partner in site.data.partners.board_partners %}
+                <a href="{{ partner.link }}" target="_blank" class="partner-box">
+                    {{ partner.name }}
                 </a>
-                <a href="https://ontario.ca/shsm" target="_blank" class="partner-box">
-                    Ontario Specialist High Skills Major (SHSM)
-                </a>
+               {% endfor %}
            </div>
            <div class="row partner-container big-partners">
                 <a href="https://www.amd.com/en" class="amd" target="_blank" rel="noopener noreferrer" class="partner-box">
@@ -482,51 +481,12 @@
            </div>
 
            <div class="row partner-container normal-partners">
-                    <a href="https://www.ibm.com/ca-en/" target="_blank" class="partner-box">
-                        IBM
-                    </a>
-                    <a href="https://www.huawei.com/ca/" target="_blank" class="partner-box">
-                        Huawei
-                    </a>
-                    <a href="http://www.cicsiyc.org/" target="_blank" class="partner-box">
-                        Immigrant Youth Center
-                    </a>
-                    <a href="https://www.staples.ca/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Staples
-                    </a>
-                    <a href="https://www.echoar.xyz/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        EchoAR
-                    </a>
-                    <a href="https://repl.it/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Repl.it
-                    </a>
-                    <a href="https://www.voiceflow.com/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Voiceflow
-                    </a>
-                    <a href="https://www.linkedin.com/company/cohere-ai/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Co:here Neural Network
-                    </a>
-                    <a href="https://toronto.hackstudent.com/" rel="noopener noreferrer" target="_blank" class="partner-box">
-                        HackStudent
-                    </a>
-                    <a href="https://www.cockroachlabs.com/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        CockroachDB
-                    </a>
-                    <a href="https://www.stickergiant.com/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        StickerGiant
-                    </a>
-                    <a href="https://www.thecyc.org/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        The Canadian Youth Champions
-                    </a>
-                    <a href="https://triwayeducation.com/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Triway Education Center
-                    </a>
-                    <a href="https://edgeprim.com/" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        EdgePrim
-                    </a>
-                    <a href="https://lassonde.yorku.ca" target="_blank" rel="noopener noreferrer" class="partner-box">
-                        Best @ YorkU
-                    </a>
+               {% for partner in site.data.partners.normal_partners %}
+                <a href="{{ partner.link }}" target="_blank" rel="noopener noreferrer" class="partner-box">
+                    {{ partner.name }}
+                </a>
+               {% endfor %}
+
                <!-- </div> -->
            </div>
        </div>
