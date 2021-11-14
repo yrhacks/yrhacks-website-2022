@@ -4,6 +4,6 @@
 
 layout: index
 location: Virtual
-time: check back later for more info!
+time: April 8-9, 2022
 details: :) :) :) :) we'll add info here later :) :) :)
 ---
