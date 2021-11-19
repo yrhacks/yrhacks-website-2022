@@ -1,6 +1,7 @@
 .voronoi {
   position: absolute;
   z-index: -4;
+  background-image: linear-gradient(to bottom right, black, #5452DD);
 }
 
 .main-header-area {
@@ -32,4 +33,8 @@
 
 #cr {
   background-color: transparent;
+  color: black;
+}
+#cr a {
+  color: #5452DD;
 }

@@ -84,7 +84,7 @@
     <!-- header-end -->
 
     <!-- slider_area_start -->
-    <canvas class="voronoi" id="main-voronoi"></canvas>
+    <canvas class="voronoi" id="main-canvas"></canvas>
     <div class="slider_area" id="main">
         <div class="slider_text">
             <div class="container">
@@ -151,7 +151,7 @@
                             <span class="sub_heading">Introducing</span>
                             <h3>YRHacks!</h3>
                         </div>
-                        <p>{{ page.details }}</p>
+                        <p>{{ page.details | markdownify}}</p>
                         <!--a href="#speakers" class="boxed-btn smooth_scroll">Our Speakers</!--a-->
                     </div>
                 </div>
@@ -571,7 +571,7 @@
     <!-- ================ contact section end ================= -->
 
     <!-- footer_start -->
-    <canvas class="voronoi" id="footer-voronoi"></canvas>
+    <!-- <canvas class="voronoi" id="footer-voronoi"></canvas> -->
     <footer class="footer" id="footer">
         <!-- <div class="circle_ball d-none d-lg-block">
             <img class="lazyload" data-src="img/banner/purple.png" alt="">
@@ -660,7 +660,7 @@
 
     <script src="js/custom.js"></script>
     <script src="js/lazysizes.min.js"></script>
-    <script src="js/voronoi-background.js"></script>
+    <script src="js/background.js"></script>
 
 </body>
 
