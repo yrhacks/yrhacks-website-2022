@@ -11,7 +11,7 @@ questions:
     heading_id: headingTwo
 
   - question: Who can participate in YRHacks?
-    answer:  YRHacks will is open to all YRDSB high school students
+    answer:  YRHacks will be open to all YRDSB high school students.
     collapse_id: collapseOne
     heading_id: headingOne
 

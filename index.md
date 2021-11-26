@@ -5,5 +5,5 @@
 layout: index
 location: Virtual
 time: April 8-9, 2022
-details: "Check out our [sponsorship package](https://www.canva.com/design/DAEvuuYrIGs/share/preview?token=F-rQvLLIIA_XYxvLeYXCfA&role=EDITOR&utm_content=DAEvuuYrIGs&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1)!"
+details: "Check out our [sponsorship package](pdf/YRHacks Sponsorship Package.pdf)!"
 ---
