@@ -15,8 +15,8 @@ questions:
     collapse_id: collapseOne
     heading_id: headingOne
 
-  - question: When is the registration deadline?
-    answer: We will let you know as soon as possible!
+  - question: Where do I sign up?
+    answer: Sign up <a href="https://forms.gle/xVyL9MmosEGCp2dVA">here</a> (form will open March 3rd).
     collapse_id: collapseFour
     heading_id: headingFour
 
