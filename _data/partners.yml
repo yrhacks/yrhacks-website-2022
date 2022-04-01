@@ -6,35 +6,32 @@ board_partners:
     link: https://ontario.ca/shsm
 
 normal_partners:
-  - name: IBM
-    link: https://www.ibm.com/ca-en/
-
   - name: Huawei
     link: https://www.huawei.com/ca/
 
-  - name: Immigrant Youth Center
-    link: http://www.cicsiyc.org/
+  - name: Wolfram
+    link: https://www.wolfram.com/
 
-  - name: Staples
-    link: https://www.staples.ca/
+  - name: Prodigy
+    link: https://www.prodigygame.com/main-en/
 
-  - name: EchoAR
-    link: https://www.echoar.xyz/
+  - name: Somm
+    link: https://www.somm.io/
   
-  - name: Repl.it
-    link: https://repl.it/
+  - name: University of Toronto - Mississauga
+    link: https://www.utm.utoronto.ca/
 
   - name: Voiceflow
     link: https://www.voiceflow.com/
 
   - name: Co:here Neural Network
-    link: https://www.linkedin.com/company/cohere-ai/
+    link: https://cohere.ai/
 
   - name: HackStudent
     link: https://toronto.hackstudent.com/
 
-  - name: CockroachDB
-    link: https://www.cockroachlabs.com/
+  - name: Art of Problem Solving
+    link: https://artofproblemsolving.com/
 
   - name: StickerGiant
     link: https://www.stickergiant.com/
@@ -45,8 +42,8 @@ normal_partners:
   - name: Triway Education Center
     link: https://triwayeducation.com/
 
-  - name: EdgePrim
-    link: https://edgeprim.com/
+  - name: Ryerson DMZ
+    link: https://dmz.ryerson.ca/
 
-  - name: Best @ YorkU
-    link: https://lassonde.yorku.ca
+  - name: YorkU
+    link: https://www.yorku.ca/
