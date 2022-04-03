@@ -474,11 +474,11 @@
                 </a>
                {% endfor %}
            </div>
-           <div class="row partner-container big-partners">
+           <!-- <div class="row partner-container big-partners">
                 <a href= "https://www.ibm.com/ca-en/" class="amd" target="_blank" rel="noopener noreferrer" class="partner-box">
                     IBM
                 </a>
-           </div>
+           </div> -->
 
            <div class="row partner-container normal-partners">
                {% for partner in site.data.partners.normal_partners %}
@@ -489,6 +489,24 @@
 
                <!-- </div> -->
            </div>
+           <div class="row">
+            <div class="col-xl-12">
+                <div class="serction_title_large mb-95">
+                    <h3>
+                        Previous Partners
+                    </h3>
+                </div>
+            </div>
+        </div>
+           <div class="row partner-container normal-partners">
+            {% for partner in site.data.partners.previous_partners %}
+             <a href="{{ partner.link }}" target="_blank" rel="noopener noreferrer" class="partner-box">
+                 {{ partner.name }}
+             </a>
+            {% endfor %}
+
+            <!-- </div> -->
+        </div>
        </div>
    </div>
     <!-- <div class="brand_area" id="partners">
